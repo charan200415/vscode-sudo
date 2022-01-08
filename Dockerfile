@@ -41,7 +41,7 @@ RUN sudo apt-get install -y nodejs
 # COPY deploy-container/myTool /home/coder/myTool
 
 # -----------
-
+RUN apt update && apt install wget -y
 # Port
 ENV PORT=8080
 
