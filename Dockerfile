@@ -43,13 +43,6 @@ RUN sudo apt-get install -y nodejs
 # -----------
 RUN sudo apt update && sudo apt install wget -y
 RUN sudo apt install python3-pip -y
-RUN sudo apt-get update
-RUN sudo apt-get install xrdp -y
-RUN sudo apt-get install xfce4 -y
-RUN sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
-RUN sudo adduser xrdp ssl-cert  
-RUN sudo apt install ufw -y 
-RUN sudo ufw allow 3389/tcp
 #RUN 
 # Port
 ENV PORT=8080
