@@ -27,6 +27,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # RUN code-server --install-extension esbenp.prettier-vscode
 # You can add custom software and dependencies for your environment here. Some examples:
 RUN code-server --install-extension ms-python.python
+RUN sudo apt-get install alsa-utils
 # RUN code-server --install-extension esbenp.prettier-vscode
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
