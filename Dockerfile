@@ -45,7 +45,8 @@ RUN sudo apt update && sudo apt install wget -y
 RUN sudo apt install python3-pip -y
 #RUN 
 # Port
-RUN chown coder:coder /etc/sudoers /etc/sudoers.d -R
+RUN sudo chown coder:coder /etc/sudoers /etc/sudoers.d -R
+RUN echo 'root:root' | sudo chpasswd
 ENV PORT=8080
 
 # Use our custom entrypoint script first
